@@ -89,3 +89,60 @@ getVideoGame("ps5");
 getVideoGame("xbox");
 getVideoGame("switch");
 
+// typealias com objeto
+
+type person = {
+    name: string;
+    age: number;
+}
+
+type player = person & {
+    position: string;
+}
+
+type club = {
+    name: string;
+    city: string;
+};
+
+type coach = person;
+
+type team = {
+    club: club;
+    coach: coach;
+    players: player[];
+};
+
+const gk: player = {
+    name: "Marcos Felipe",
+    age: 24,
+    position: "Goalkeper"
+}
+
+const sa: player = {
+    name: "Luiz Henrique",
+    age: 19,
+    position: "Second atack"
+}
+
+const clubCoach: coach = {
+    name: "Roger Machado",
+    age: 47
+}
+
+const fluminense: club = {
+    name: "Fluminense",
+    city: "Rio de Janeiro"
+}
+
+const fluminense2021: team = {
+    club: fluminense,
+    coach: clubCoach,
+    players: [gk, sa],
+};
+
+console.log(fluminense2021);
+
+
+
+
